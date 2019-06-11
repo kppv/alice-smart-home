@@ -1,0 +1,24 @@
+{
+  "request_id": "{rid}",
+  "payload": {
+    "user_id": "Pavel-K",
+    "devices": [
+      {
+        "id": "{id}",
+        "name": "Лампа",
+        "description": "лампа",
+        "room": "спальня",
+        "type": "devices.types.light",
+        "capabilities": [
+          {
+            "type": "devices.capabilities.on_off",
+            "state": {
+              "instance": "on",
+              "value": "{state}"
+            }
+          }
+        ]
+      }
+    ]
+  }
+}
