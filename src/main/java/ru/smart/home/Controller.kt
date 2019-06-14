@@ -31,7 +31,10 @@ class Controller {
      * @return
      */
     @GetMapping(value = ["/state"])
-    fun getState(): ResponseEntity<Map<String, Boolean>> = ResponseEntity.ok(states)
+    fun getState(r: HttpServletRequest): ResponseEntity<Map<String, Boolean>> {
+        log.info("Get State from {}, [{}]", r.getHeader("X-FORWARDED-FOR"), r.getHeader("User-Agent"))
+        return ResponseEntity.ok(states)
+    }
 
     /**
      * Ping от платформы Умный.Дом
