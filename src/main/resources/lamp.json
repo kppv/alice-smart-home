@@ -1,7 +1,6 @@
 {
   "request_id": "{rid}",
   "payload": {
-    "user_id": "Pavel-K",
     "devices": [
       {
         "id": "{id}",
@@ -14,7 +13,10 @@
             "type": "devices.capabilities.on_off",
             "state": {
               "instance": "on",
-              "value": "{state}"
+              "value": "{state}",
+              "action_result": {
+                "status": "DONE"
+              }
             }
           }
         ]

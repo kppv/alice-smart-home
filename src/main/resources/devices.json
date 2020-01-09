@@ -4,18 +4,6 @@
     "user_id": "Pavel-K",
     "devices": [
       {
-        "id": "L1",
-        "name": "Лампа",
-        "description": "лампа",
-        "room": "спальня",
-        "type": "devices.types.light",
-        "capabilities": [
-          {
-            "type": "devices.capabilities.on_off"
-          }
-        ]
-      },
-      {
         "id": "L2",
         "name": "Лампа",
         "description": "лампа",
