@@ -1,0 +1,6 @@
+home:
+  devices:
+    - id: 1
+      name: "Лампа"
+    - id: 2
+      name: "Светильник"
