@@ -2,5 +2,8 @@ home:
   devices:
     - id: 1
       name: "Лампа"
-    - id: 2
-      name: "Светильник"
+      description: "Лампа в зале"
+      room: "Зал"
+      type: "devices.types.light"
+      capabilities:
+        - type: "devices.capabilities.on_off"

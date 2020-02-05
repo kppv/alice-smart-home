@@ -1,9 +1,9 @@
 package ru.qrdp.home.device
 
 import org.springframework.boot.context.properties.ConfigurationProperties
-import org.springframework.context.annotation.Configuration
+import org.springframework.stereotype.Component
 
-@Configuration
+@Component
 @ConfigurationProperties(prefix = "home")
 class Home {
     var devices: List<Device> = emptyList()
