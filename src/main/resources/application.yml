@@ -1,8 +1,8 @@
 home:
   devices:
     - id: 1
-      name: "Лампа"
-      description: "Лампа в зале"
+      name: "Светильник"
+      description: "Светильник в зале"
       room: "Зал"
       type: "devices.types.light"
       capabilities:
