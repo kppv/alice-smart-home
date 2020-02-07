@@ -4,7 +4,7 @@ import com.fasterxml.jackson.annotation.JsonProperty
 
 class State {
     var instance: String? = "on"
-    var value: String? = "false"
+    var value: Boolean = false
 
     @get:JsonProperty("action_result")
     var actionResult: ActionResult = ActionResult()

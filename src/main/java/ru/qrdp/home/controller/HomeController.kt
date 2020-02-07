@@ -7,6 +7,7 @@ import ru.qrdp.home.common.getLogger
 import ru.qrdp.home.common.toHomeHeaders
 import ru.qrdp.home.common.toJson
 import ru.qrdp.home.device.Home
+import ru.qrdp.home.dto.HomeRequest
 import ru.qrdp.home.dto.HomeResponse
 import ru.qrdp.home.dto.Payload
 import ru.qrdp.home.service.HomeService
@@ -73,7 +74,7 @@ class HomeController(
      * @return
      */
     @PostMapping(value = ["/v1.0/user/devices/action"], produces = ["application/json"])
-    fun action(request: HttpServletRequest): ResponseEntity<HomeResponse> =
+    fun action(@RequestBody homeRequest: HomeRequest, request: HttpServletRequest): ResponseEntity<HomeResponse> =
             ok(HomeResponse(request.toHomeHeaders().requestId, Payload(devices = homeService.getHome().devices)))
 
 
