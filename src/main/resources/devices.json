@@ -1,0 +1,91 @@
+{
+  "devices": [
+    {
+      "id": 1,
+      "name": "Лампа",
+      "description": "Лампа в спальне",
+      "room": "спальня",
+      "type": "devices.types.other",
+      "capabilities": [
+        {
+          "type": "devices.capabilities.on_off",
+          "retrievable": true,
+          "state": {
+            "instance": "on",
+            "value": false
+          }
+        },
+        {
+          "type": "devices.capabilities.range",
+          "retrievable": true,
+          "state": {
+            "instance": "brightness",
+            "value": 20
+          },
+          "parameters": {
+            "instance": "brightness",
+            "random_access": true,
+            "unit": "unit.percent",
+            "range": {
+              "max": 100,
+              "min": 0,
+              "precision": 5
+            }
+          }
+        },
+        {
+          "type": "devices.capabilities.range",
+          "retrievable": true,
+          "state": {
+            "instance": "channel",
+            "value": 1
+          },
+          "parameters": {
+            "instance": "channel",
+            "random_access": true,
+            "range": {
+              "max": 16,
+              "min": 0,
+              "precision": 1
+            }
+          }
+        },
+        {
+          "type": "devices.capabilities.range",
+          "retrievable": true,
+          "state": {
+            "instance": "temperature",
+            "value": 1
+          },
+          "parameters": {
+            "instance": "temperature",
+            "unit": "unit.temperature.celsius",
+            "random_access": true,
+            "range": {
+              "max": 255,
+              "min": 0,
+              "precision": 1
+            }
+          }
+        },
+        {
+          "type": "devices.capabilities.range",
+          "retrievable": true,
+          "state": {
+            "instance": "volume",
+            "value": 5
+          },
+          "parameters": {
+            "instance": "volume",
+            "random_access": true,
+            "range": {
+              "max": 255,
+              "min": 0,
+              "precision": 1
+            }
+          }
+        }
+      ]
+    }
+  ]
+}

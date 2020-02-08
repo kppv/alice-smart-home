@@ -3,7 +3,7 @@ package ru.qrdp.home.device
 import com.fasterxml.jackson.annotation.JsonProperty
 
 class State {
-    var instance: String? = null
+    var instance: String = ""
     var value: Any? = null
 
     @get:JsonProperty("action_result")
