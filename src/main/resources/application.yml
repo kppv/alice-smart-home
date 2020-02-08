@@ -1,9 +1,27 @@
 home:
   devices:
     - id: 1
-      name: "Светильник"
-      description: "Светильник в зале"
-      room: "Зал"
-      type: "devices.types.light"
+      name: "Лампа"
+      description: "Лампа в спальне"
+      room: "спальня"
+      type: "devices.types.other"
       capabilities:
         - type: "devices.capabilities.on_off"
+          retrievable: true
+          state:
+            instance: "on"
+            value: false
+
+        - type: "devices.capabilities.range"
+          retrievable: true
+          state:
+            instance: "brightness"
+            value: 50
+          parameters:
+            instance: "brightness"
+            random_access: true
+            unit: "unit.percent"
+            range:
+              max: 100
+              min: 0
+              precision: 10

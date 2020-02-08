@@ -7,4 +7,6 @@ class Device {
     var room: String = ""
     var type: String = ""
     var capabilities: List<Capability> = emptyList()
+
+    fun getCapability(type: String): Capability? = capabilities.find { it.type.equals(type) }
 }

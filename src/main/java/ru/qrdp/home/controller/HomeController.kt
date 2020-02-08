@@ -45,12 +45,9 @@ class HomeController(
      */
     @GetMapping(value = ["/v1.0/user/devices"], produces = ["application/json"])
     fun devices(request: HttpServletRequest): ResponseEntity<HomeResponse> =
-            request.toHomeHeaders()
-                    .let {
-                        val response = HomeResponse(it.requestId, Payload(devices = homeService.getHome().devices))
-                        log.info(response.toJson())
-                        ok(response)
-                    }
+            HomeResponse(request.toHomeHeaders().requestId, Payload(devices = homeService.getHome().devices))
+                    .also { log.info("Devices: {}", it.toJson()) }
+                    .let { ok(it) }
 
     /**
      * Состояние устройства для платформы Умный.Дом
@@ -60,12 +57,9 @@ class HomeController(
      */
     @PostMapping(value = ["/v1.0/user/devices/query"], produces = ["application/json"])
     fun query(request: HttpServletRequest): ResponseEntity<HomeResponse> =
-            request.toHomeHeaders()
-                    .let {
-                        val response = HomeResponse(it.requestId, Payload(devices = homeService.getHome().devices))
-                        log.info(response.toJson())
-                        ok(response)
-                    }
+            HomeResponse(request.toHomeHeaders().requestId, Payload(devices = homeService.getHome().devices))
+                    .also { log.info("Query: {}", it.toJson()) }
+                    .let { ok(it) }
 
     /**
      * Умный.Дом меняет состояние устройства
@@ -75,7 +69,10 @@ class HomeController(
      */
     @PostMapping(value = ["/v1.0/user/devices/action"], produces = ["application/json"])
     fun action(@RequestBody homeRequest: HomeRequest, request: HttpServletRequest): ResponseEntity<HomeResponse> =
-            ok(HomeResponse(request.toHomeHeaders().requestId, Payload(devices = homeService.getHome().devices)))
+            homeService.changeState(homeRequest.payload.devices!![0])
+                    .run { HomeResponse(request.toHomeHeaders().requestId, Payload(devices = homeService.getHome().devices)) }
+                    .also { log.info("Action: {}", it.toJson()) }
+                    .let { ok(it) }
 
 
     /**
