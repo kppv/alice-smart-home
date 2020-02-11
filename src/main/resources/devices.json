@@ -2,8 +2,8 @@
   "devices": [
     {
       "id": 1,
-      "name": "Лампа",
-      "description": "Лампа в спальне",
+      "name": "Светильник",
+      "description": "Светильник в спальне",
       "room": "спальня",
       "type": "devices.types.other",
       "capabilities": [
