@@ -65,6 +65,7 @@
 
     <build>
         <finalName>alice-smart-home</finalName>
+        <sourceDirectory>${project.basedir}/src/main/kotlin</sourceDirectory>
         <plugins>
             <plugin>
                 <groupId>org.jetbrains.kotlin</groupId>
@@ -92,10 +93,6 @@
                 </dependencies>
                 <executions>
                     <execution>
-                        <id>kapt</id>
-                        <goals>
-                            <goal>kapt</goal>
-                        </goals>
                         <configuration>
                             <sourceDirs>
                                 <sourceDir>src/main/kotlin</sourceDir>
@@ -114,7 +111,8 @@
                 <groupId>org.springframework.boot</groupId>
                 <artifactId>spring-boot-maven-plugin</artifactId>
                 <configuration>
-                    <mainClass>ru.qrdp.home.Application</mainClass>
+                    <mainClass>ru.qrdp.home.ApplicationKt</mainClass>
+                    <executable>true</executable>
                 </configuration>
             </plugin>
         </plugins>
