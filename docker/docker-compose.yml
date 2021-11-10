@@ -1,0 +1,9 @@
+version: "3"
+
+services:
+  alice-smart-home:
+    build:
+      context: ../
+      dockerfile: ./docker/Dockerfile
+    ports:
+      - "8888:8080"
