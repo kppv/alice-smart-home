@@ -1,10 +1,10 @@
 {
   "devices": [
     {
-      "id": 1,
+      "id": "lamp-01",
       "name": "Светильник",
-      "description": "Светильник в спальне",
-      "room": "спальня",
+      "description": "Светильник в коридоре",
+      "room": "коридор",
       "type": "devices.types.other",
       "capabilities": [
         {
@@ -83,6 +83,104 @@
               "min": 0,
               "precision": 1
             }
+          }
+        }
+      ]
+    },
+    {
+      "id": "backlight-01",
+      "name": "Подсветка",
+      "description": "Подсветка телевизора",
+      "room": "зал",
+      "type": "devices.types.light",
+      "capabilities": [
+        {
+          "type": "devices.capabilities.range",
+          "retrievable": true,
+          "state": {
+            "instance": "brightness",
+            "value": 50
+          },
+          "parameters": {
+            "instance": "brightness",
+            "random_access": true,
+            "range": {
+              "max": 100,
+              "min": 1,
+              "precision": 1
+            },
+            "unit": "unit.percent"
+          }
+        },
+        {
+          "type": "devices.capabilities.color_setting",
+          "retrievable": true,
+          "state": {
+            "instance": "rgb",
+            "value": 14777215
+          },
+          "parameters": {
+            "color_model": "rgb",
+            "color_scene": {
+              "scenes": [
+                {
+                  "id": "candle"
+                },
+                {
+                  "id": "dinner"
+                },
+                {
+                  "id": "fantasy"
+                },
+                {
+                  "id": "garland"
+                },
+                {
+                  "id": "jungle"
+                },
+                {
+                  "id": "movie"
+                },
+                {
+                  "id": "neon"
+                },
+                {
+                  "id": "night"
+                },
+                {
+                  "id": "ocean"
+                },
+                {
+                  "id": "party"
+                },
+                {
+                  "id": "reading"
+                },
+                {
+                  "id": "rest"
+                },
+                {
+                  "id": "romance"
+                },
+                {
+                  "id": "siren"
+                },
+                {
+                  "id": "sunrise"
+                },
+                {
+                  "id": "sunset"
+                }
+              ]
+            }
+          }
+        },
+        {
+          "type": "devices.capabilities.on_off",
+          "retrievable": true,
+          "state": {
+            "instance": "on",
+            "value": false
           }
         }
       ]
