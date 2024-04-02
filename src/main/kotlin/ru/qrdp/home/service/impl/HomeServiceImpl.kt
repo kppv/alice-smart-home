@@ -49,8 +49,8 @@ class HomeServiceImpl(
         }
 
         when (existedDevice.id) {
-            "lamp-01" -> lampIntegrationService.changeState(existedDevice)
-            "backlight-01" -> backlightIntegrationService.changeState(existedDevice)
+            "lamp-02" -> lampIntegrationService.changeState(existedDevice)
+            "backlight-02" -> backlightIntegrationService.changeState(existedDevice)
         }
     }
 }

@@ -11,13 +11,13 @@ class LampIntegrationServiceImpl : LampIntegrationService {
     private val log = getLogger(this::class.java)
 
     override fun changeState(device: Device) {
-//        val url = "http://192.168.1.79/" +
-//                "?mode=${device.getChannel()}" +
-//                "&speed=${device.getSpeed()}" +
-//                "&scale=${device.getScale()}" +
-//                "&brightness=${device.getBrightness() * 2}" +
-//                "&on=${device.getEnabled()}"
-//        log.info("Send request: {}", url)
-//        URL(url).readBytes()
+        val url = "http://192.168.1.83/" +
+                "?mode=${device.getChannel()}" +
+                "&speed=${device.getSpeed()}" +
+                "&scale=${device.getScale()}" +
+                "&brightness=${device.getBrightness() * 2}" +
+                "&on=${device.getEnabled()}"
+        log.info("Send request: {}", url)
+        URL(url).readBytes()
     }
 }

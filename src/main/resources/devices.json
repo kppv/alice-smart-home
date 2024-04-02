@@ -1,7 +1,7 @@
 {
   "devices": [
     {
-      "id": "lamp-01",
+      "id": "lamp-02",
       "name": "Светильник",
       "description": "Светильник в коридоре",
       "room": "коридор",
@@ -88,7 +88,7 @@
       ]
     },
     {
-      "id": "backlight-01",
+      "id": "backlight-02",
       "name": "Подсветка",
       "description": "Подсветка телевизора",
       "room": "зал",
@@ -127,9 +127,6 @@
                   "id": "candle"
                 },
                 {
-                  "id": "dinner"
-                },
-                {
                   "id": "fantasy"
                 },
                 {
@@ -139,28 +136,16 @@
                   "id": "jungle"
                 },
                 {
-                  "id": "movie"
-                },
-                {
                   "id": "neon"
                 },
                 {
                   "id": "night"
                 },
                 {
-                  "id": "ocean"
-                },
-                {
                   "id": "party"
                 },
                 {
-                  "id": "reading"
-                },
-                {
                   "id": "rest"
-                },
-                {
-                  "id": "romance"
                 },
                 {
                   "id": "siren"
